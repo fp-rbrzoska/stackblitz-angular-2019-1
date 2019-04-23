@@ -1,1 +1,9 @@
-/* Add application styles & imports to this file! */
+.red {
+  background-color: red;
+  color: white;
+}
+
+.green {
+  background-color: green;
+  color: white;
+}

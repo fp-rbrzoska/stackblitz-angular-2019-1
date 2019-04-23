@@ -1,4 +1,7 @@
-<p>
-parent works!
-</p>
-<app-child [counter]="myVar" (childClick)="handleChildClick($event)"></app-child>
+
+<button (click)="toggleShowList()"
+ [ngClass]="{'red' : !showList, 'green': showList}"
+>{{showList? 'Hide' : 'Show'}} list</button>
+<div *ngIf="showList">
+<app-child  *ngFor="let item of myVar" [counter]="item" (childClick)="handleChildClick($event)"></app-child>
+</div>

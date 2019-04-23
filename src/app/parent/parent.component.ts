@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentComponent implements OnInit {
 
-  myVar = 5;
+  myVar = [1,2,3,4];
+  showList = true;
   constructor() { }
 
   ngOnInit() {
@@ -15,7 +16,10 @@ export class ParentComponent implements OnInit {
 
   handleChildClick(multipliedCounter) {
     alert(multipliedCounter);
-    this.myVar++;
+  }
+
+  toggleShowList() {
+    this.showList = !this.showList;
   }
 
 }
